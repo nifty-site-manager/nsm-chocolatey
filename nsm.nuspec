@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>nsm</id>
-    <version>1.17</version>
+    <version>1.19</version>
     <packageSourceUrl>https://github.com/nifty-site-manager/nsm-chocolatey</packageSourceUrl>
     <owners>Nick Ham</owners>
 
@@ -36,12 +36,13 @@
     </description>
     <summary>dynamic and static site generator</summary>
     <releaseNotes>
-      * Version 1.17 of Nift
-      * changed std::endl to "\n" when writing to file, 20% improvement in build-all time on some machines, no improvement on others
-      * changed pages set to pointer in PageBuilder.h, significantly less memory consumption
-      * added/improved Nift commands new-template, new-site-dir, new-cont-dir, new-cont-ext, new-page-ext
-      * added @systemcontent(sys-call) syntax to template language
-      * fixed bug with @system, @systemoutput, @script, @scriptoutput syntax
+      * Version 1.19 of Nift
+      * added more error handling
+      * added string variables
+      * added rootBranch and siteBranch to config files
+      * changed/improved/finalised how pre/post build/serve scripts are done
+      * fixed @script[output] and @system[output/content]
+      * added pre/post build-[all/updated] script support
     </releaseNotes>
 	
     <!-- =============================== -->      
