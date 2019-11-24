@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>nsm</id>
-    <version>1.19</version>
+    <version>1.20</version>
     <packageSourceUrl>https://github.com/nifty-site-manager/nsm-chocolatey</packageSourceUrl>
     <owners>Nick Ham</owners>
 
@@ -36,13 +36,13 @@
     </description>
     <summary>dynamic and static site generator</summary>
     <releaseNotes>
-      * Version 1.19 of Nift
-      * added more error handling
-      * added string variables
-      * added rootBranch and siteBranch to config files
-      * changed/improved/finalised how pre/post build/serve scripts are done
-      * fixed @script[output] and @system[output/content]
-      * added pre/post build-[all/updated] script support
+      * Version 1.20 of Nift
+      * made template language available with input parameters
+      * added paginfo syntax @pagename, @pagepath, @contentpath, @templatepath to template language
+      * added siteinfo syntax @contentdir, @sitedir, @contentext, @pageext, @defaulttemplate to template language
+      * fixed indenting bugs
+      * fixed ox_mtx functionality
+      * added optional sleepTime parameter for Nift serve command
     </releaseNotes>
 	
     <!-- =============================== -->      
