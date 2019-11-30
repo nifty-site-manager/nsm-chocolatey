@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>nsm</id>
-    <version>1.21</version>
+    <version>1.22</version>
     <packageSourceUrl>https://github.com/nifty-site-manager/nsm-chocolatey</packageSourceUrl>
     <owners>Nick Ham</owners>
 
@@ -36,13 +36,17 @@
     </description>
     <summary>dynamic and static site generator</summary>
     <releaseNotes>
-      * Version 1.21 of Nift
-      * removed trailing '/' or '\\' from @contentdir and @sitedir output
-      * fixed bugs with @contentdir, @sitedir, @contentext syntax
-      * fixed indenting when parsing parameters
-      * added more error handling with Nift commands new-[cont/page]-ext 
-      * added file input syntax @rawcontent, @inputraw, @scriptraw, @systemraw to template language
-      * added user input syntax @userin, @userfilein to template language
+      * Version 1.22 of Nift
+      * added in scriptExt to config files, better way to do pre/post build/serve scripts
+      * added command `new-script-ext (page-name) scriptExt`
+      * changed/improved how pre/post build/serve scripts are done
+      * hopefully fixed bugs with @script, @scriptoutput, @scriptraw functions
+      * added optional parameter string parameter to @script, @scriptoutput, @scriptraw functions
+      * updated Nift info commands with additional page information
+      * added pageinfo syntax @pagecontentext, @pagepageext, @pagescriptext to template language
+      * added siteinfo syntax @scriptext to template language
+      * added in buildThreads to config files
+      * added command `no-build-thrds (no-threads)`
     </releaseNotes>
 	
     <!-- =============================== -->      
