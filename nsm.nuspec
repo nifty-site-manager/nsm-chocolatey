@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>nsm</id>
-    <version>1.24</version>
+    <version>1.25</version>
     <packageSourceUrl>https://github.com/nifty-site-manager/nsm-chocolatey</packageSourceUrl>
     <owners>Nick Ham</owners>
 
@@ -36,15 +36,22 @@
     </description>
     <summary>dynamic and static site generator</summary>
     <releaseNotes>
-      * Version 1.24 of Nift
-      * fixed bugs with content/page/script extensions and mv/cp/rm aka move/copy/del
-      * updated/moved removePath to remove_path and remove_file and now removes now-empty directories
-      * added in ^ option for @script syntax in template language for not making a backup copy
-      * added in backupScripts to config files
-      * added Nift commands track-dir, untrack-dir, rm-dir, track-from-file, untrack-from-file, rm-from-file (note when removing large volumes of pages using rm-from-file can cause significant machine lags while running and not long after)
-      * added Nift commands watch, unwatch, info-watching
-      * got rid of pre/post build-all and build-updated scripts, costs too much time and not really needed
-      * added pre/post build scripts to page dependencies
+      * Version 1.25 of Nift
+      * changed the way @ is escaped and removed most escape characters (too likely to conflict in other places)
+      * added @ent syntax to template language
+      * added `@\@` `@\&lt;` `@\\` escaping syntax to template language
+      * improved reading parameters
+      * changed how strings/variables are done in preparation for more types (to come, type defs and function defs)
+      * now allow multiple string definitions in the one definition
+      * improved syntax for inputting tracked file and project/site information, now basically hard-coded constants
+      * fixed bug with delDir, which fixed bugs with `clone` etc.
+      * removed website specific terminology (lots of changes)
+      * added Nift command `backup-scripts (option)`
+      * changed one of the Nift `config` commands to `info-config`
+      * added Nift command `info-tracking`
+      * check if new content path etc. exist with `new-cont-ext` etc.
+      * check whether content file already exists when moving/copying 
+      * make sure all tracks/untracks/rms will be successful before any of them are done
     </releaseNotes>
 	
     <!-- =============================== -->      
