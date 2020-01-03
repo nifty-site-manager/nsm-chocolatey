@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>nsm</id>
-    <version>1.25.1</version>
+    <version>2.0</version>
     <packageSourceUrl>https://github.com/nifty-site-manager/nsm-chocolatey</packageSourceUrl>
     <owners>Nick Ham</owners>
 
@@ -36,22 +36,20 @@
     </description>
     <summary>dynamic and static site generator</summary>
     <releaseNotes>
-      * Version 1.25 of Nift
-      * changed the way @ is escaped and removed most escape characters (too likely to conflict in other places)
-      * added @ent syntax to template language
-      * added `@\@` `@\&lt;` `@\\` escaping syntax to template language
-      * improved reading parameters
-      * changed how strings/variables are done in preparation for more types (to come, type defs and function defs)
-      * now allow multiple string definitions in the one definition
-      * improved syntax for inputting tracked file and project/site information, now basically hard-coded constants
-      * fixed bug with delDir, which fixed bugs with `clone` etc.
-      * removed website specific terminology (lots of changes)
-      * added Nift command `backup-scripts (option)`
-      * changed one of the Nift `config` commands to `info-config`
-      * added Nift command `info-tracking`
-      * check if new content path etc. exist with `new-cont-ext` etc.
-      * check whether content file already exists when moving/copying 
-      * make sure all tracks/untracks/rms will be successful before any of them are done
+      * Version 2.0 of Nift
+      * changed @inputcontent to @content()
+      * changed @inputraw(file-path) to @input{raw}(file-path)
+      * addded if-exists/raw option to @input(file-path) and @content()
+      * added file/name options to @pathto
+      * changed @userin(msg) to @in(msg) and @userfilein(msg) to @in{from-file}(msg)
+      * added if-exists/inject/raw/content options to @script/@system
+      * changed from using @[varname] and @{varname} to @[varname] and @&lt;varname> when printing variables
+      * changed to @funcname{options}(params) for function call syntax
+      * changed from using * option to parse params to {!p} option to NOT parse function name, options and params
+      * changed from using ^ option to not backup scripts to {!bs} option
+      * added read_params
+      * fixup up read_def and read_func_name
+      * fixed multi-line comments
     </releaseNotes>
 	
     <!-- =============================== -->      
