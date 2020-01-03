@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>nsm</id>
-    <version>2.0</version>
+    <version>2.0.1</version>
     <packageSourceUrl>https://github.com/nifty-site-manager/nsm-chocolatey</packageSourceUrl>
     <owners>Nick Ham</owners>
 
@@ -36,20 +36,8 @@
     </description>
     <summary>dynamic and static site generator</summary>
     <releaseNotes>
-      * Version 2.0 of Nift
-      * changed @inputcontent to @content()
-      * changed @inputraw(file-path) to @input{raw}(file-path)
-      * addded if-exists/raw option to @input(file-path) and @content()
-      * added file/name options to @pathto
-      * changed @userin(msg) to @in(msg) and @userfilein(msg) to @in{from-file}(msg)
-      * added if-exists/inject/raw/content options to @script/@system
-      * changed from using @[varname] and @{varname} to @[varname] and @&lt;varname> when printing variables
-      * changed to @funcname{options}(params) for function call syntax
-      * changed from using * option to parse params to {!p} option to NOT parse function name, options and params
-      * changed from using ^ option to not backup scripts to {!bs} option
-      * added read_params
-      * fixup up read_def and read_func_name
-      * fixed multi-line comments
+      * Version 2.0.1 of Nift
+      * fixed bug when cloning a website repository from an empty directory (and any other similar bugs from using remove_path where remove_file is more appropriate, ie. when creating temporary text files)
     </releaseNotes>
 	
     <!-- =============================== -->      
