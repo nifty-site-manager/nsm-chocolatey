@@ -2,28 +2,32 @@
 <package>
   <metadata>
     <id>nsm</id>
-    <version>2.0.1</version>
+    <version>2.1</version>
     <packageSourceUrl>https://github.com/nifty-site-manager/nsm-chocolatey</packageSourceUrl>
     <owners>Nick Ham</owners>
 
     <!-- ============================== -->
 
-    <title>Nift</title>
+    <title>[Deprecated] Nift</title>
     <authors>Nick Ham</authors>
     <projectUrl>https://nift.cc</projectUrl>
-    <iconUrl>https://rawcdn.githack.com/nifty-site-manager/nsm-chocolatey/d1692f3d9790fa7a44c39d9f3d4ab679e13046ff/icon.png?raw=true</iconUrl>
     <copyright>2015-present</copyright>
     <licenseUrl>https://github.com/nifty-site-manager/nsm/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/nifty-site-manager/nsm</projectSourceUrl>
     <docsUrl>https://www.nift.cc/docs/nift_commands.html</docsUrl>
     <bugTrackerUrl>https://github.com/nifty-site-manager/nsm-chocolatey/issues</bugTrackerUrl>
-    <tags>nsm nift dynamic static site generator</tags>
+    <tags>nsm nift dynamic and static site generator</tags>
     <dependencies>
         <dependency id="git" />
+        <dependency id="nift" />
     </dependencies>
     <description>
-      install: `choco install nsm`
+      Note: This package has been deprecated/renamed to `nift`
+
+      See https://chocolatey.org/packages/nift
+
+      install: `choco install nift`
 		
       Nift (aka nsm) is a cross-platform open source git-like and
       LaTeX-like command-line dynamic and static site generator.
@@ -34,16 +38,13 @@
       out of date by more than a day or two, please contact the maintainer(s) and
       let them know the package is no longer updating correctly.
     </description>
-    <summary>dynamic and static site generator</summary>
+    <summary>[Deprecated] dynamic and static site generator</summary>
     <releaseNotes>
-      * Version 2.0.1 of Nift
-      * fixed bug when cloning a website repository from an empty directory (and any other similar bugs from using remove_path where remove_file is more appropriate, ie. when creating temporary text files)
+      * Version 2.1 of Nift
+      * deprecated `nsm` package in favour of `nift`
     </releaseNotes>
 	
     <!-- =============================== -->      
   </metadata>
-  <files>
-    <file src="*" />
-    <file src="tools\**" target="tools" />
-  </files>
+  <files />
 </package>
